@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 from utils.handle_date import handle_date # Import handle_date util fuction
 
@@ -12,8 +13,12 @@ model = Model()
 
 class Scrape:
     def __init__(self):
+        chrome_options = Options()
+        chrome_options.add_argument("--headless") # Run Chrome in headless mode
+        chrome_options.add_argument("--window-size=1920x1080") # Set window size to 1920x1080 pixels
+        chrome_options.add_argument("--disable-notifications") # Disable notifications
         self.url = "https://theverge.com/"
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.implicitly_wait(30)
         self.driver.get(self.url)
 

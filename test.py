@@ -1,6 +1,4 @@
 import unittest
-import sqlite3
-from unittest.mock import MagicMock, mock_open, patch
 from database.db import Database
 from model import Model
 
