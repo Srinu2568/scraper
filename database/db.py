@@ -58,9 +58,10 @@ class Database:
         print(res)
 
 
-
-db = Database()
+# db = Database()
 # data = ['google.com', 'this is google', 'sundar', '27-2-2003']
 # db.insert(data)
 # db.save()
-db.printData()
+# db.printData()
+# cur = db.getCursor()
+# print(type(cur))

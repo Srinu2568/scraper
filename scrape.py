@@ -49,10 +49,8 @@ class Scrape:
         db.save()
 
         # Save data to csv
-        cur = db.getCursor()
         model = Model()
-        model.saveToCSV(cur)
-        cur.close()
+        model.saveToCSV()
 
 
 if __name__ == "__main__":
